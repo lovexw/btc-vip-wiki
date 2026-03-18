@@ -3,6 +3,7 @@ id: hodl
 title: HODL (死拿)
 tags: [社区文化, 交易心态]
 sidebar_position: 1
+slug: /hodl
 ---
 
 ## 什么是 HODL？

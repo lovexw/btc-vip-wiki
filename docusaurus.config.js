@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: '比特币江湖“黑话”',
   tagline: '一秒看懂比特币圈子里的行话与暗语',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/bitcoin-btc-logo.svg',
 
   // 站点的线上访问地址
   url: 'https://wiki.btchao.com', 
@@ -62,8 +62,8 @@ const config = {
       navbar: {
         title: '比特币江湖“黑话”',
         logo: {
-          alt: 'Logo',
-          src: 'img/logo.svg', // 以后有了自己的 Logo 替换这里就行
+        alt: '比特币 Logo',
+        src: 'img/bitcoin-btc-logo.svg', // 就改这一行！改成你的 svg 文件名v'vv'vv
         },
         items: [
           {
