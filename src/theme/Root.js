@@ -41,7 +41,7 @@ export default function Root({ children }) {
     setStatus('sending');
     try {
       // 请求我们刚才写的 CF 后端代理接口
-      const res = await fetch('/submit', {
+      const res = await fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ term: term.trim() })
