@@ -23,3 +23,15 @@
   --ifm-color-primary-lightest: #f9b55f;
   --docusaurus-highlighted-code-line-bg: rgba(247, 147, 26, 0.1);
 }
+
+/* 首页分类区块悬停效果 */
+.hero .button--secondary {
+  background-color: white;
+  color: #333;
+}
+
+.hero .button--secondary:hover {
+  background-color: #fff;
+  color: var(--ifm-color-primary); /* 悬停时文字变橙色 */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2) !important;
+}
