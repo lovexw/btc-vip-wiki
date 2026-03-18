@@ -24,12 +24,13 @@ function HomepageHeader() {
           {[
             { title: '💎 核心信仰', link: '/docs/lth', desc: 'HODL与底色' },
             { title: '📈 市场交易', link: '/docs/fud', desc: '博弈与心理' },
-            { title: '🌍 宏观政策', link: '/docs/category/宏观经济与政策', desc: 'ETF与监管' },
+            { title: '🌍 宏观政策', link: '/docs/etf', desc: 'ETF与监管' }, // 改为指向具体词条
             { title: '🛡️ 资产安全', link: '/docs/cold-wallet', desc: '私钥与钱包' },
             { title: '📊 链上分析', link: '/docs/hashrate', desc: '数据与算力' },
             { title: '🎭 社区文化', link: '/docs/pizza-day', desc: '黑话与老梗' },
-            { title: '⚡ 技术进阶', link: '/docs/category/技术协议与进阶', desc: '闪电网络等' },
+            { title: '⚡ 技术进阶', link: '/docs/lightning-network', desc: '闪电网络等' }, // 改为指向具体词条
           ].map((item, idx) => (
+            // ... 后面的代码保持不变 ...
             <Link
               key={idx}
               className="button button--secondary"

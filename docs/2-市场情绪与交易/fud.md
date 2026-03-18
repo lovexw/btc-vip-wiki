@@ -1,5 +1,6 @@
 ---
 id: fud
+slug: /fud
 title: FUD (恐惧、不确定与怀疑)
 ---
 

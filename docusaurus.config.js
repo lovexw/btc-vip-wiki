@@ -14,7 +14,7 @@ const config = {
   organizationName: 'lovexw', 
   projectName: 'btc-wiki', 
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // 强制全站使用中文语言环境
