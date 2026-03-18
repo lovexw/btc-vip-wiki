@@ -1,7 +1,7 @@
-// 文件路径：functions/submit.js
+// functions/submit.js
 export async function onRequestPost(context) {
   try {
-    const { request } = context;
+    const { request, env } = context; // 从 context 里解构出 env
     const body = await request.json();
     const term = body.term;
 
@@ -9,8 +9,12 @@ export async function onRequestPost(context) {
       return new Response(JSON.stringify({ error: '没有提供词条' }), { status: 400 });
     }
 
-    // 这是你的企业微信 Webhook（藏在云端，前端绝对看不到）
-    const wechatWebhookUrl = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=942d7a65-fbd7-46b0-b2b0-56680da4a881";
+    // ⭐ 魔法就在这里：WECHAT_WEBHOOK_URL 是我们在 CF 后台配置的变量名
+    const wechatWebhookUrl = env.WECHAT_WEBHOOK_URL; 
+
+    if (!wechatWebhookUrl) {
+      return new Response(JSON.stringify({ error: '后端未配置 Webhook 密钥' }), { status: 500 });
+    }
 
     const msgPayload = {
       msgtype: "text",
@@ -19,7 +23,6 @@ export async function onRequestPost(context) {
       }
     };
 
-    // 转发给企业微信
     await fetch(wechatWebhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
